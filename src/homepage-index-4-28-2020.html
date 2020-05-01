@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+    @@include("partials/head.html", {
+    "title": "Aircrft"
+    })
+</head>
+
+<body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "index.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "index.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "index.html"
+    })
+    }
+
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+        @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+        }
+
+        <!-- HEADER -->
+        <div class="header">
+
+            <!-- Image -->
+            <img src="assets/img/covers/cover-innovators-network-2440x509.png" class="header-img-top" alt="...">
+
+            <div
+                class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+                <!-- Body -->
+                <div class="header-body mt-n5 mt-md-n6">
+                    <div class="row align-items-end">
+                        <div class="col-auto">
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xxl header-avatar-top">
+                                <img src="assets/img/posts/aircrft-icon.jpg" alt="aircrft-logo"
+                                    class="avatar-img rounded-circle border border-4 border-body">
+                            </div>
+
+                        </div>
+                        <div class="col mb-3 ml-n3 ml-md-n2">
+
+                            <!-- Pretitle -->
+                            <h6 class="header-pretitle">
+                                UPLIFT & RISE TOGETHER
+                            </h6>
+
+                            <!-- Title -->
+                            <h1 class="header-title">
+                                innovators network
+                            </h1>
+
+                        </div>
+                        <div class="col-12 col-md-auto mt-2 mt-md-0 mb-md-3">
+
+                            <!-- Button 
+                <a href="#!" class="btn btn-primary d-block d-md-inline-block lift">
+                  Access aircrft
+                </a> -->
+
+                            <!-- Button 
+                <a href="#!" class="btn btn-primary d-block d-md-inline-block lift">
+                  Request aircrft invite
+                </a> -->
+
+                            <!-- Button -->
+                            <a href="memberships.html" class="btn btn-primary d-block d-md-inline-block lift">
+                                Memberships
+                            </a>
+
+                        </div>
+                    </div> <!-- / .row -->
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Nav 
+                <ul class="nav nav-tabs nav-overflow header-tabs">
+                  <li class="nav-item">
+                    <a href="profile-posts.html" class="nav-link active">
+                      Posts
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="profile-groups.html" class="nav-link">
+                      Groups
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="profile-projects.html" class="nav-link">
+                      Projects
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="profile-files.html" class="nav-link">
+                      Files
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="profile-subscribers.html" class="nav-link">
+                      Passengers
+                    </a>
+                  </li>
+                </ul>-->
+
+                        </div>
+                    </div>
+                </div> <!-- / .header-body -->
+
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div
+            class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+            <div class="row">
+                <div class="col-12 col-xl-8">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+
+                            <!-- Header -->
+                            <div class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+
+                                        <!-- Avatar -->
+                                        <a href="#!" class="avatar">
+                                            <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."
+                                                class="avatar-img rounded-circle">
+                                        </a>
+
+                                    </div>
+                                    <div class="col ml-n2">
+
+                                        <!-- Title -->
+                                        <h4 class="card-title mb-1">
+                                            Chai Forest
+                                        </h4>
+
+                                        <!-- Time -->
+                                        <p class="card-text small text-muted">
+                                            <span class="fe fe-feather"></span> <time datetime="2018-05-24">Pilot / Innovator </time><span class="fe fe-clock"></span> <time datetime="2018-05-24">3hr ago </time>
+                                        </p>
+
+                                    </div>
+                                    <div class="col-auto">
+
+                                        <!-- Dropdown 
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div> -->
+
+                                    </div>
+                                </div> <!-- / .row -->
+                            </div>
+
+                            <!-- Text 
+                <p class="mb-3">
+                    Hi, I'm Chai Forest with aircrft. <br>
+                    <br> -->
+
+                            Welcome to Aircrft - the innovator's network.
+                            <br>
+                            <br>
+                            A place where innovator's help innovator's. A place where innovator's and spectator's gather to cheer and uplift
+                            each-other.
+                            <br>
+                            <br>
+                            Why it matters?
+                            <br>
+                            <br>
+                            This is our clean slate moment! The gatekeepers have left the gates. The old rules... well there ant rules no more.
+                            <br>
+                            <br>
+                            It is squarely upon us, right now, to re-write, to re-invent, to start from scratch if we must, while humbly honoring
+                            our past and standing on the shoulders of giants.
+                            
+                            <!-- Image -->
+                            <p class="text-center mb-3">
+                                <img src="assets/img/posts/aircrft-post-img-2-homepage-4-2-2020.png" alt="..." class="img-fluid rounded">
+                            </p>
+    
+                            Let's learn from the the successes and failures. Let's give ourself's permission to truly think differently. Let's pause
+                            for a moment, take a deep breath, and then with all of the force within you - grab your grit and persistence and lets
+                            seize this moment!
+                            
+                            Yes, right here, right now - launch your startup, write that code and ship your app produce your ground breaking film, start that online TV series, publish your book... this is a your time, our time - for action!
+        
+                            <!-- Divider -->
+                            <hr>
+
+                            People die with great ideas all the time.
+                            Leave the cute idea on a napkin and move that intention
+                            into reality by declaring what your want to happen and by when!
+                            <br>
+                            <br>
+                            Aircrft is your safe space, your support environment for uplifting each-other and thriving.
+                            <br>
+                            <br>
+                            This is our moonshot moment and we - the entire aircrft team, the aircrft network is here to cheer you on and directly
+                            uplift you in a real, meaningful, consistent, focused and measurable way.
+                            
+                            <!-- Divider -->
+                            <hr>
+                            
+                            Welcome aboard all innovators and spectators!
+                            <br>
+                            <br>
+                            The aircrft has left the station! You are the pilot of your destiny. Onward!
+                            <br>
+                            <br>
+                            Chai Forest - Team Aircrft
+                            </p>
+
+                            <!-- Time 
+                            <p class="card-text small text-muted">
+                                <span class="fe fe-feather"></span> <time datetime="2018-05-24">filmmaker/ founder/ innovator</time>
+                            </p> -->
+
+                            <!-- Image 
+                            <p class="text-center mb-3">
+                                <img src="assets/img/posts/aircrft-post-img-2-homepage-4-2-2020.png" alt="..."
+                                    class="img-fluid rounded">
+                            </p> -->
+
+                            <!-- Divider -->
+                            <hr> 
+
+                            <!-- Text 
+                <p class="mb-3">
+                    As Sam Altman notes, one of the things that makes Silicon Valley so special is: A culture of paying it forward
+                    A relentless belief in the future
+                    There are people who take wild ideas seriously, instead of mocking you.
+                    We've baked these values into the core DNA of the of Aircrft. 
+                </p> -->
+
+                            <!--  <p class="mb-4">
+                    We believe when we work together, when we join forces, support each other - all ships rise - we all benefit we call this the Aircrft Uplift Algorithm. <a href="#!" class="badge badge-soft-primary">@Ab</a> or <a href="#!" class="badge badge-soft-primary">@Adolfo</a>
+                </p> -->
+
+                            <!-- Divider
+                 <hr> -->
+
+                            <!-- Text 
+                <p class="mb-3">
+                    One of the reasons I'm so passionate about startups is, I've seen first hand the positive impact an founder with an idea on a napkin - who is fueled with passion and perseverance - who is gritty enough to show up everyday and do the deep work, to ship and deliver their first MVP, to make something people want, to make something beautiful and world changing, to ship something that has the power to change lives, create a reverberating wave of abundance and economic impact, and undeniably improve the quality of our lives on planet earth and beyond.
+                </p> -->
+
+                            <!-- Divider 
+                <hr> -->
+
+                            <!-- Text 
+                <p class="mb-3">
+                    As Seth Godin says: "The scarce part is the shipping" - Aircrft is a network of like minded, purpose driven founders and startup teams that uplift and cheers each other on along this epic journey!
+                    You have brilliance in you, your contribution is valuable, only you can do it and you must.
+                    Aircrft is your supportive space for diverse and passionate voices - we are honored and humbly invite you to have a seat at the table!
+                    <br>
+                    <br>
+                    We look forward to being inspired by what you make and be a place for sharing your success story.
+                    <br>
+                    <br> 
+                    To escape velocity and beyond!
+                    <br>
+                    <br>
+                    - Chai Forest, founder aircrft.com 
+                    <br>
+                    <br>
+                    The startup network "Startups helping startups"
+                </p> -->
+
+                            <!-- Divider
+                <hr> -->
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div> <!-- / .row -->
+    </div>
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+</body>
+
+</html>

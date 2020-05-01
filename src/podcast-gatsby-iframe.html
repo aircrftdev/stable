@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Aircrft"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+      @@if (sidebarSize == 'base' || demoMode) {
+        @@include("partials/sidebar.html", {
+          "category": "pages",
+          "subcategory": "project",
+          "page": "site-iframe-demo-1.html"
+        })
+      }
+      @@if (sidebarSize == 'small' || demoMode) {
+        @@include("partials/sidebar-sm.html", {
+          "category": "pages",
+          "subcategory": "project",
+          "page": "site-iframe-demo-1.html"
+        })
+      }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "category": "pages",
+        "subcategory": "project",
+        "page": "site-iframe-demo-1.html"
+      })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+          
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-center">
+              <div class="col-auto">
+
+                <!-- Avatar -->
+                <div class="avatar avatar-lg avatar-4by3">
+                  <img src="assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+                </div>
+
+              </div>
+              <div class="col ml-n3 ml-md-n2">
+                
+                <!-- Pretitle -->
+                <h6 class="header-pretitle">
+                  Website iframe dev test! 
+                </h6>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  podcast-gatsby-iframe
+                </h1>
+
+              </div>
+              <div class="col-12 col-md-auto mt-3 mt-md-0">
+                
+                <!-- Avatar group -->
+                <div class="avatar-group">
+                  <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Dianna Smiley">
+                    <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                  </a>
+                  <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Ab Hadley">
+                    <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                  </a>
+                  <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Adolfo Hess">
+                    <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                  </a>
+                  <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Daniela Dewitt">
+                    <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                  </a>
+                </div>
+
+                <!-- Button -->
+                <a href="#modalMembers" class="btn btn-lg btn-rounded-circle btn-white lift" data-toggle="modal">
+                  +
+                </a>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row align-items-center">
+              <div class="col">
+                
+                <!-- Nav -->
+                <ul class="nav nav-tabs nav-overflow header-tabs">
+                  <li class="nav-item">
+                    <a href="podcast-gatsby-iframe.html
+                    " class="nav-link active">
+                      Season 1
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="podcast-gatsby-iframe.html" class="nav-link">
+                      Season 2 
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="podcast-gatsby-iframe.html" class="nav-link">
+                      Season 3 
+                    </a>
+                  </li>
+                </li>
+                <li class="nav-item">
+                  <a href="https://github.com/vojtaholik/gatsby-theme-simplecast" class="nav-link">
+                    Github Code Link 
+                  </a>
+                </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CONTENT -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row">
+          <div class="col-12">
+            
+            <!-- Alert -->
+            <div class="alert alert-primary">
+              This is an iframe embed test
+
+              <!-- Close -->
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+
+            </div>
+
+            <!-- iframe ghost embed -->
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://gatsby-theme-simplecast.netlify.com/" allowfullscreen></iframe>
+              <span aria-hidden="true">×</span>
+            </div>
+
+          </div>
+      
+    </div> <!-- / .main-content -->
+
+    <!-- Divider -->
+    <hr class="my-5">
+          
+    <p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/0e690498b295a14d7933dca98b2d9afd2d229d14/68747470733a2f2f636c2e6c792f6335333030366164316435642f657a6769662e636f6d2d6f7074696d697a65253235323532302831292e676966"><img src="https://camo.githubusercontent.com/0e690498b295a14d7933dca98b2d9afd2d229d14/68747470733a2f2f636c2e6c792f6335333030366164316435642f657a6769662e636f6d2d6f7074696d697a65253235323532302831292e676966" data-canonical-src="https://cl.ly/c53006ad1d5d/ezgif.com-optimize%252520(1).gif" style="max-width:100%;"></a></p>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

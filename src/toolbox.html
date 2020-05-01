@@ -1,0 +1,1941 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include("partials/head.html", {
+    "title": "Aircrft Toolbox"
+    })
+</head>
+
+<body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-files.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-files.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-files.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+        @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+        }
+
+        <!-- HEADER -->
+        <div class="header">
+
+            <!-- Image -->
+            <img src="assets/img/covers/toolbox/cover-toolbox-2.png" class="header-img-top" alt="strategies">
+
+            <div
+                class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+                <!-- Body -->
+                <div class="header-body mt-n5 mt-md-n6">
+                    <div class="row align-items-end">
+                        <div class="col-auto">
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xxl header-avatar-top">
+                                <img src="assets/img/avatars/icons/toolbox-icon.jpg" alt="toolbox"
+                                    class="avatar-img rounded-circle border border-4 border-body">
+                            </div>
+
+                        </div>
+                        <div class="col mb-3 ml-n3 ml-md-n2">
+
+                            <!-- Pretitle -->
+                            <h6 class="header-pretitle">
+                                AIRCRFT
+                            </h6>
+
+                            <!-- Title -->
+                            <h1 class="header-title">
+                                Toolbox
+                            </h1>
+
+                        </div>
+                        <div class="col-12 col-md-auto mt-2 mt-md-0 mb-md-3">
+
+                            <!-- Button 
+                <a href="#!" class="btn btn-primary d-block d-md-inline-block lift">
+                  Subscribe
+                </a> -->
+
+                        </div>
+                    </div> <!-- / .row -->
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Nav -->
+                            <ul class="nav nav-tabs nav-overflow header-tabs">
+                                <li class="nav-item">
+                                    <a href="toolbox.html" class="nav-link-primary">
+                                        Startup Essentials
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="profile-groups.html" class="nav-link-primary">
+                                        Code + Development
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="profile-projects.html" class="nav-link-primary">
+                                        Content Production
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item">
+                    <a href="profile-files.html" class="nav-link active">
+                      Files
+                    </a>
+                  </li> -->
+                                <!-- <li class="nav-item">
+                    <a href="profile-subscribers.html" class="nav-link">
+                      Passengers
+                    </a>
+                  </li> -->
+                            </ul>
+
+                        </div>
+                    </div>
+                </div> <!-- / .header-body -->
+
+            </div>
+        </div>
+
+        <!-- Startup Essentials List 4-20-2020 -->
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Files -->
+                    <div class="card" data-toggle="lists" data-options='{"valueNames": ["name"]}'>
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col">
+
+                                    <!-- Title -->
+                                    <h4 class="card-header-title">
+                                        Startup Essentials
+                                    </h4>
+
+                                </div>
+                                <div class="col-auto">
+
+                                    <!-- Dropdown -->
+                                    <div class="dropdown">
+
+                                        <!-- Toggle -->
+                                        <a href="#" class="small text-muted dropdown-toggle" data-toggle="dropdown">
+                                            Sort order
+                                        </a>
+
+                                        <!-- Menu -->
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item sort" data-sort="name" href="#!">
+                                                Asc
+                                            </a>
+                                            <a class="dropdown-item sort" data-sort="name" href="#!">
+                                                Desc
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-auto">
+
+                                    <!-- Button 
+                    <a href="#!" class="btn btn-sm btn-primary">
+                      Upload
+                    </a> -->
+
+                                </div>
+                            </div> <!-- / .row -->
+                        </div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <!-- Form -->
+                                    <form>
+                                        <div class="input-group input-group-flush input-group-merge">
+                                            <input type="search startup jobs"
+                                                class="form-control form-control-prepended search" placeholder="Search">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span class="fe fe-search"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div> <!-- / .row -->
+                        </div>
+                        <div class="card-body">
+
+                            <!-- Lean startup -->
+                            <ul class="list-group list-group-lg list-group-flush list my-n4">
+                                <li class="list-group-item px-0">
+
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+
+                                            <!-- Avatar 
+                                            <a href="https://en.wikipedia.org/wiki/Lean_startup" class="avatar avatar-lg">
+                                                <img src="assets/img/toolbox-startups/260px-The_Cambridge_Business_Model_Innovation_Process.png"
+                                                    alt="toolbox-startups Business_Model_Innovation_Process" class="avatar-img rounded">
+                                            </a> -->
+                                            <!-- Avatar 
+                                            <a href="https://en.wikipedia.org/wiki/Lean_startup" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-package"></span>
+                                                </span>
+                                            </a> -->
+
+                                        </div>
+                                        <div class="col ml-n2">
+
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name" class="avatar-title rounded bg-white text-secondary" class="fe fe-package"> <a href="https://en.wikipedia.org/wiki/Lean_startup">Lean startup</a>
+                                            </h4> 
+
+                                            <!-- Text -->
+                                            <p class="card-text small text mb-1">
+                                                Lean startup is a methodology for developing businesses and products that aims to shorten product development cycles <br>
+                                                and rapidly discover if a proposed business model is viable.
+                                            </p>
+
+                                            <!-- Time 
+                                            <p class="card-text small text-muted">
+                                                Updated <time datetime="2020-06-14"></time>
+                                            </p> -->
+
+                                        </div>
+                                        <div class="col-auto">
+
+                                            <!-- Button 
+                                            <a href="https://en.wikipedia.org/wiki/Lean_startup" class="btn btn-sm btn-white d-md-inline-block">
+                                                Learn more
+                                            </a> -->
+
+                                        </div>
+                                        <div class="col-auto">
+
+                                            <!-- Dropdown 
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Add to my list
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Learn more
+                                                    </a> 
+                                                    <a href="https://en.wikipedia.org/wiki/Lean_startup" class="dropdown-item">
+                                                        Resource link
+                                                    </a>
+                                                </div>
+                                            </div> -->
+
+                                        </div>
+                                    </div> <!-- / .row -->
+
+                                </li>
+                                <li class="list-group-item px-0">
+
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+
+                                        </div>
+                                        <div class="col ml-n2">
+
+                                            <!-- Lean canvas -->
+                                            <h4 class="card-title mb-1 name nav-link-primary">
+                                                <a href="https://en.wikipedia.org/wiki/Lean_startup#Lean_Canvas">Lean canvas</a>
+                                            </h4>
+
+                                            <!-- Text -->
+                                            <p class="card-text small text mb-1">
+                                                The Lean Canvas focuses on addressing broad customer problems and solutions and delivering them to <br>
+                                                customer segments through a unique value proposition.
+                                            </p>
+
+                                        </div>
+
+                                        </div>
+                                    </div> <!-- / .row -->
+
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <img src="assets/img/files/file-5-chartyourflightpath.png" alt="..." class="avatar-img rounded">
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                                <li class="list-group-item px-0">
+                                
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-pie-chart"></span>
+                                                </span>
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col ml-n2">
+                                
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Lean startup</a>
+                                            </h4>
+                                
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                1.5mb PNG
+                                            </p>
+                                
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                    2020</time>
+                                            </p>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+                                
+                                        </div>
+                                        <div class="col-auto">
+                                
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </div> <!-- / .row -->
+                                
+                                </li>
+                            <li class="list-group-item px-0">
+                            
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                            
+                                        <!-- Avatar -->
+                                        <a href="#!" class="avatar avatar-lg">
+                                            <span class="avatar-title rounded bg-white text-secondary">
+                                                <span class="fe fe-pie-chart"></span>
+                                            </span>
+                                        </a>
+                            
+                                    </div>
+                                    <div class="col ml-n2">
+                            
+                                        <!-- Title -->
+                                        <h4 class="card-title mb-1 name">
+                                            <a href="#!">Lean canvas</a>
+                                        </h4>
+                            
+                                        <!-- Text -->
+                                        <p class="card-text small text-muted mb-1">
+                                            1.5mb PNG
+                                        </p>
+                            
+                                        <!-- Time -->
+                                        <p class="card-text small text-muted">
+                                            Uploaded by Chai Forest on <time datetime="2018-01-03">Mar 3,
+                                                2020</time>
+                                        </p>
+                            
+                                    </div>
+                                    <div class="col-auto">
+                            
+                                        <!-- Button -->
+                                        <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                            Deploy
+                                        </a>
+                            
+                                    </div>
+                                    <div class="col-auto">
+                            
+                                        <!-- Dropdown -->
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <i class="fe fe-more-vertical"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#!" class="dropdown-item">
+                                                    Action
+                                                </a>
+                                                <a href="#!" class="dropdown-item">
+                                                    Another action
+                                                </a>
+                                                <a href="#!" class="dropdown-item">
+                                                    Something else here
+                                                </a>
+                                            </div>
+                                        </div>
+                            
+                                    </div>
+                                </div> <!-- / .row -->
+                            
+                            </li>
+                                <li class="list-group-item px-0">
+
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+
+                                            <!-- Avatar -->
+                                            <a href="#!" class="avatar avatar-lg">
+                                                <span class="avatar-title rounded bg-white text-secondary">
+                                                    <span class="fe fe-folder"></span>
+                                                </span>
+                                            </a>
+
+                                        </div>
+                                        <div class="col ml-n2">
+
+                                            <!-- Title -->
+                                            <h4 class="card-title mb-1 name">
+                                                <a href="#!">Business canvas</a>
+                                            </h4>
+
+                                            <!-- Text -->
+                                            <p class="card-text small text-muted mb-1">
+                                                6.9mb directory
+                                            </p>
+
+                                            <!-- Time -->
+                                            <p class="card-text small text-muted">
+                                                Uploaded by Chai Forest on <time datetime="2018-01-03">Apr 17,
+                                                    2020</time>
+                                            </p>
+
+                                        </div>
+                                        <div class="col-auto">
+
+                                            <!-- Button -->
+                                            <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
+                                                Deploy
+                                            </a>
+
+                                        </div>
+                                        <div class="col-auto">
+
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div> <!-- / .row -->
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+        </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+</body>
+
+</html>

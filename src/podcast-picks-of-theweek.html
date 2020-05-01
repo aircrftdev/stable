@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include("partials/head.html", {
+    "title": "Aircrft Podcast Picks of the Week"
+    })
+</head>
+
+<body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "kanban.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "kanban.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "kanban.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+        @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+        }
+
+        <!-- HEADER -->
+        <div class="header">
+            <div
+                class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+                <!-- Body -->
+                <div class="header-body">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Pretitle -->
+                            <h6 class="header-pretitle">
+                                Aircrft
+                            </h6>
+
+                            <!-- Title -->
+                            <h1 class="header-title">
+                                Podcasts of knowledge
+                            </h1>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Buttons 
+                <a href="#!" class="btn btn-white mr-2">
+                  Edit
+                </a> -->
+
+                            <!-- Navigation (button group) -->
+                            <div class="nav btn-group d-inline-flex" role="tablist">
+                                <button class="btn btn-white active" id="kanbanColumnsToggle" data-toggle="tab"
+                                    data-target="#kanbanColumns" role="tab" aria-controls="kabbanColumns"
+                                    aria-selected="true">
+                                    <span class="fe fe-grid"></span>
+                                </button>
+                                <button class="btn btn-white" id="kanbanListToggle" data-toggle="tab"
+                                    data-target="#kanbanList" role="tab" aria-controls="kanbanList"
+                                    aria-selected="false">
+                                    <span class="fe fe-list"></span>
+                                </button>
+                            </div> <!-- / .nav -->
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="kanbanColumns" role="tabpanel"
+                aria-labelledby="kanbanColumnsToggle">
+                <div
+                    class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid kanban-container}@@if(navPosition=='topnav'){container kanban-container}">
+                    <div class="row">
+                    <div class="col-12">
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-header card-header-flush">
+                                <div class="row align-items-center">
+                                    <div class="col">
+
+                                        <!-- Title -->
+                                        <h4 class="card-header-title">
+                                            Weekly updates <i class="fe fe-map-pin"></i>
+                                        </h4>
+
+                                    </div>
+                                    <div class="col-auto">
+
+                                        <!-- Dropdown -->
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-ellipses dropdown-toggle" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fe fe-more-vertical"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#!" class="dropdown-item">
+                                                    Action
+                                                </a>
+                                                <a href="#!" class="dropdown-item">
+                                                    Another action
+                                                </a>
+                                                <a href="#!" class="dropdown-item">
+                                                    Something else here
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> <!-- / .row -->
+                            </div>
+                            <div class="card-body">
+
+                                <!-- Category -->
+                                <div class="kanban-category">
+
+                                    <!-- Card -->
+                                    <div class="kanban-item">
+                                        <div class="card card-sm mb-3" data-toggle="modal"
+                                            data-target="#modalPodcastKanban1">
+
+                                            <!-- Image -->
+                                            <img src="assets/img/kanban-knowledge/mos.jpg" alt="..."
+                                                class="card-img-top">
+
+                                            <!-- Body -->
+                                            <div class="card-body">
+
+                                                <!-- Body -->
+                                                <p>
+                                                    <!--<i class="fe fe-user-check">--></i><strong> Masters of Scale</strong> with Reid Hoffman
+                                                </p>
+
+                                                <!-- Footer -->
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+
+                                                        <!-- Time -->
+                                                        <p class="card-text small text-muted">
+                                                            <i class="fe fe-message-circle"></i> 23 <i
+                                                                class="fe fe-clock ml-3"></i> Sep 9
+                                                        </p>
+
+                                                    </div>
+                                                    <div class="col-auto">
+
+                                                        <!-- Avatar group -->
+                                                        <div class="avatar-group">
+                                                            <a href="profile-posts.html" class="avatar avatar-xs"
+                                                                data-toggle="tooltip" title="Team Aircrft">
+                                                                <img src="assets/img/avatars/profiles/avatar-4.png"
+                                                                    class="avatar-img rounded-circle" alt="...">
+                                                            </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div> <!-- / .row -->
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="kanban-item">
+                                        <div class="card card-sm mb-3" data-toggle="modal"
+                                            data-target="#modalKanbanTaskEmpty">
+                                            <div class="card-body">
+
+                                                <!-- Badge -->
+                                                <p class="mb-3">
+                                                    <span class="badge badge-soft-primary">
+                                                        Weekly update
+                                                    </span>
+                                                </p>
+
+                                                <!-- Body -->
+                                                <p class="mb-0">
+                                                    <strong>👉 </strong>Weekly updates are a great way to keep your
+                                                    network in the loop.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="kanban-item">
+                                        <div class="card card-sm mb-3" data-toggle="modal"
+                                            data-target="#modalKanbanTask">
+                                            <div class="card-body">
+
+                                                <!-- Body -->
+                                                <p>
+                                                    <strong>👆 </strong>Weekly update videos should come in under 3
+                                                    minutes. Shoot it on your mobile device,
+                                                    use good audio, and effortlessly upload into your Aircrft kanban.
+                                                </p>
+
+                                                <!-- Footer -->
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+
+                                                        <!-- Time -->
+                                                        <p class="card-text small text-muted">
+                                                            <i class="fe fe-clock"></i> Jun 11
+                                                        </p>
+
+                                                    </div>
+                                                    <div class="col-auto">
+
+                                                        <!-- Avatar group -->
+                                                        <div class="avatar-group">
+                                                            <a href="profile-posts.html" class="avatar avatar-xs"
+                                                                data-toggle="tooltip" title="Miyah Miles">
+                                                                <img src="assets/img/avatars/profiles/avatar-5.jpg"
+                                                                    class="avatar-img rounded-circle" alt="...">
+                                                            </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div> <!-- / .row -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Add -->
+                                <div class="kanban-add">
+                                    <div class="card card-sm card-flush mb-0">
+                                        <div class="card-body">
+
+                                            <!-- Link -->
+                                            <div class="text-center">
+                                                <a class="kanban-add-link" href="#!">Add Card</a>
+                                            </div>
+
+                                            <!-- Form -->
+                                            <form class="kanban-add-form d-none">
+
+                                                <!-- Input -->
+                                                <div class="form-group">
+                                                    <textarea class="form-control form-control-flush"
+                                                        placeholder="Draft your card"></textarea>
+                                                </div>
+
+                                                <!-- Footer -->
+                                                <div class="row align-items-center">
+                                                    <div class="col d-flex align-items-center">
+
+                                                        <!-- Icon -->
+                                                        <span class="text-muted small mr-2">
+                                                            <i class="fe fe-clock"></i>
+                                                        </span>
+
+                                                        <!-- Input -->
+                                                        <input type="text"
+                                                            class="form-control form-control-sm form-control-flush text-muted"
+                                                            data-toggle="flatpickr" data-options='{"dateFormat": "M j"}'
+                                                            placeholder="No due date">
+
+                                                    </div>
+                                                    <div class="col-auto">
+
+                                                        <!-- Buttons -->
+                                                        <button class="btn btn-sm btn-white" type="reset">
+                                                            Cancel
+                                                        </button>
+                                                        <button class="btn btn-sm btn-primary" type="submit">
+                                                            Add
+                                                        </button>
+
+                                                    </div>
+                                                </div> <!-- / .row -->
+
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12">
+                    
+            <div class="row">
+                <div class="col-12">
+            
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-header card-header-flush">
+                            <div class="row align-items-center">
+                                <div class="col">
+            
+                                    <!-- Title -->
+                                    <h4 class="card-header-title">
+                                        Pick of the week <i class="fe fe-map-pin"></i>
+                                    </h4>
+            
+                                </div>
+                                <div class="col-auto">
+            
+                                    <!-- Dropdown -->
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="fe fe-more-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#!" class="dropdown-item">
+                                                Action
+                                            </a>
+                                            <a href="#!" class="dropdown-item">
+                                                Another action
+                                            </a>
+                                            <a href="#!" class="dropdown-item">
+                                                Something else here
+                                            </a>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div> <!-- / .row -->
+                        </div>
+                        <div class="card-body">
+            
+                            <!-- Category -->
+                            <div class="kanban-category">
+            
+                                <!-- Card -->
+                                <div class="kanban-item">
+                                    <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalPodcastKanban1">
+            
+                                        <!-- Image -->
+                                        <img src="assets/img/kanban-knowledge/mos.jpg" alt="..." class="card-img-top">
+            
+                                        <!-- Body -->
+                                        <div class="card-body">
+            
+                                            <!-- Body -->
+                                            <p>
+                                                <!--<i class="fe fe-user-check">--></i><strong> Masters of Scale </strong> with Reid
+                                                Hoffman
+                                            </p>
+            
+                                            <!-- Footer -->
+                                            <div class="row align-items-center">
+                                                <div class="col">
+            
+                                                    <!-- Time -->
+                                                    <p class="card-text small text-muted">
+                                                        <!-- <i class="fe fe-message-circle"></i> 23 --> <i
+                                                            class="fe fe-clock ml-3"></i> May 2, 2020
+                                                    </p>
+            
+                                                </div>
+                                                <div class="col-auto">
+            
+                                                    <div class="avatar-group">
+                                                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip"
+                                                            title="Team Aircrft">
+                                                            <img src="assets/img/avatars/profiles/avatar-4.png"
+                                                                class="avatar-img rounded-circle" alt="...">
+                                                        </a>
+                                                    </div>
+            
+                                                </div>
+                                            </div> <!-- / .row -->
+            
+                                        </div>
+            
+                                    </div>
+                                </div>
+            
+                                <!-- Card -->
+                                <div class="kanban-item">
+                                    <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTaskEmpty">
+                                        <div class="card-body">
+            
+                                            <!-- Badge -->
+                                            <p class="mb-3">
+                                                <span class="badge badge-soft-primary">
+                                                    COV19 coverage
+                                                </span>
+                                            </p>
+            
+                                            <!-- Body -->
+                                            <p class="mb-0">
+                                                <strong>👉 Masters of Scale</strong> is an original podcast hosted by Reid Hoffman,
+                                                co-founder of LinkedIn and investor at Greylock. In each
+                                                episode, Reid shows how companies grow from zero to a gazillion, testing his
+                                                theories with legendary leaders. Masters of
+                                                Scale is the first American media program to commit to gender balance for
+                                                guests.share what your working on at the
+                                                moment, the problem your startup solves, and who the solution is for.
+                                            </p>
+            
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <!-- Card -->
+                                <div class="kanban-item">
+                                    <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
+                                        <div class="card-body">
+            
+                                            <div class="col-auto">
+            
+                                                <!-- Body -->
+                                                <p>
+                                                    <a href="https://podcasts.apple.com/podcast/id1227971746?ls=1&amp;mt=2"><img
+                                                            class="alignleft wp-image-9414 size-full" style="margin-top: 0px;"
+                                                            src="https://mastersofscale.com/wp-content/uploads/2017/04/listen_on_apple_podcast-1.svg"
+                                                            alt="Apple Podcasts button" width="132.791px" height="34.013px">
+                                                    </a>
+                                                </p>
+            
+                                                <p>
+                                                    <a href="https://open.spotify.com/show/1bJRgaFZHuzifad4IAApFR"><img
+                                                            class="alignnone wp-image-15057" style="margin-top: -5px;"
+                                                            src="https://mastersofscale.com/wp-content/uploads/2019/11/spotify-podcast-badge-wht-grn-165x40.png"
+                                                            alt="" width="137" height="33">
+                                                    </a>
+                                                </p>
+            
+                                            </div>
+                                        </div> <!-- / .row -->
+            
+            
+                                    </div>
+                                </div>
+            
+                            </div>
+            
+                        </div> <!-- / .row -->
+                    </div>
+                </div>
+            
+            </div>
+                    <div class="row">
+                        <div class="col-12">
+                    
+                            <!-- Card -->
+                            <div class="card">
+                                <div class="card-header card-header-flush">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                    
+                                            <!-- Title -->
+                                            <h4 class="card-header-title">
+                                                Weekly updates <i class="fe fe-map-pin"></i>
+                                            </h4>
+                    
+                                        </div>
+                                        <div class="col-auto">
+                    
+                                            <!-- Dropdown -->
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#!" class="dropdown-item">
+                                                        Action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Another action
+                                                    </a>
+                                                    <a href="#!" class="dropdown-item">
+                                                        Something else here
+                                                    </a>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div> <!-- / .row -->
+                                </div>
+                                <div class="card-body">
+                    
+                                    <!-- Category -->
+                                    <div class="kanban-category">
+                    
+                                        <!-- Card -->
+                                        <div class="kanban-item">
+                                            <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalPodcastKanban1">
+                    
+                                                <!-- Image -->
+                                                <img src="assets/img/kanban-knowledge/mos.jpg" alt="..." class="card-img-top">
+                    
+                                                <!-- Body -->
+                                                <div class="card-body">
+                    
+                                                    <!-- Body -->
+                                                    <p>
+                                                        <!--<i class="fe fe-user-check">--></i><strong> Masters of Scale</strong> with Reid
+                                                        Hoffman
+                                                    </p>
+                    
+                                                    <!-- Footer -->
+                                                    <div class="row align-items-center">
+                                                        <div class="col">
+                    
+                                                            <!-- Time -->
+                                                            <p class="card-text small text-muted">
+                                                                <i class="fe fe-message-circle"></i> 23 <i class="fe fe-clock ml-3"></i> Sep
+                                                                9
+                                                            </p>
+                    
+                                                        </div>
+                                                        <div class="col-auto">
+                    
+                                                            <!-- Avatar group -->
+                                                            <div class="avatar-group">
+                                                                <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip"
+                                                                    title="Team Aircrft">
+                                                                    <img src="assets/img/avatars/profiles/avatar-4.png"
+                                                                        class="avatar-img rounded-circle" alt="...">
+                                                                </a>
+                                                            </div>
+                    
+                                                        </div>
+                                                    </div> <!-- / .row -->
+                    
+                                                </div>
+                    
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Card -->
+                                        <div class="kanban-item">
+                                            <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTaskEmpty">
+                                                <div class="card-body">
+                    
+                                                    <!-- Badge -->
+                                                    <p class="mb-3">
+                                                        <span class="badge badge-soft-primary">
+                                                            Weekly update
+                                                        </span>
+                                                    </p>
+                    
+                                                    <!-- Body -->
+                                                    <p class="mb-0">
+                                                        <strong>👉 </strong>Weekly updates are a great way to keep your
+                                                        network in the loop.
+                                                    </p>
+                    
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Card -->
+                                        <div class="kanban-item">
+                                            <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
+                                                <div class="card-body">
+                    
+                                                    <!-- Body -->
+                                                    <p>
+                                                        <strong>👆 </strong>Weekly update videos should come in under 3
+                                                        minutes. Shoot it on your mobile device,
+                                                        use good audio, and effortlessly upload into your Aircrft kanban.
+                                                    </p>
+                    
+                                                    <!-- Footer -->
+                                                    <div class="row align-items-center">
+                                                        <div class="col">
+                    
+                                                            <!-- Time -->
+                                                            <p class="card-text small text-muted">
+                                                                <i class="fe fe-clock"></i> Jun 11
+                                                            </p>
+                    
+                                                        </div>
+                                                        <div class="col-auto">
+                    
+                                                            <!-- Avatar group -->
+                                                            <div class="avatar-group">
+                                                                <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip"
+                                                                    title="Miyah Miles">
+                                                                    <img src="assets/img/avatars/profiles/avatar-5.jpg"
+                                                                        class="avatar-img rounded-circle" alt="...">
+                                                                </a>
+                                                            </div>
+                    
+                                                        </div>
+                                                    </div> <!-- / .row -->
+                    
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                    
+                                    <!-- Add -->
+                                    <div class="kanban-add">
+                                        <div class="card card-sm card-flush mb-0">
+                                            <div class="card-body">
+                    
+                                                <!-- Link -->
+                                                <div class="text-center">
+                                                    <a class="kanban-add-link" href="#!">Add Card</a>
+                                                </div>
+                    
+                                                <!-- Form -->
+                                                <form class="kanban-add-form d-none">
+                    
+                                                    <!-- Input -->
+                                                    <div class="form-group">
+                                                        <textarea class="form-control form-control-flush"
+                                                            placeholder="Draft your card"></textarea>
+                                                    </div>
+                    
+                                                    <!-- Footer -->
+                                                    <div class="row align-items-center">
+                                                        <div class="col d-flex align-items-center">
+                    
+                                                            <!-- Icon -->
+                                                            <span class="text-muted small mr-2">
+                                                                <i class="fe fe-clock"></i>
+                                                            </span>
+                    
+                                                            <!-- Input -->
+                                                            <input type="text"
+                                                                class="form-control form-control-sm form-control-flush text-muted"
+                                                                data-toggle="flatpickr" data-options='{"dateFormat": "M j"}'
+                                                                placeholder="No due date">
+                    
+                                                        </div>
+                                                        <div class="col-auto">
+                    
+                                                            <!-- Buttons -->
+                                                            <button class="btn btn-sm btn-white" type="reset">
+                                                                Cancel
+                                                            </button>
+                                                            <button class="btn btn-sm btn-primary" type="submit">
+                                                                Add
+                                                            </button>
+                    
+                                                        </div>
+                                                    </div> <!-- / .row -->
+                    
+                                                </form>
+                    
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                    
+                        </div>
+                        <div class="col-12">
+            
+                                    </div>
+                                </div>
+            
+                            </div>
+            
+                        </div> <!-- / .row -->
+                    </div>
+                </div>
+            
+            </div>
+
+            
+                                    </div>
+                                </div>
+            
+                            </div>
+            
+                        </div> <!-- / .row -->
+                    </div>
+                </div>
+            
+            </div>
+
+
+                    </div> <!-- / .main-content -->
+
+                    <!-- JAVASCRIPT
+    ================================================== -->
+                    @@include("partials/scripts.html")
+
+</body>
+
+</html>

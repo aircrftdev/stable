@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Aircrft Startup Spotlight Form"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+      @@if (sidebarSize == 'base' || demoMode) {
+        @@include("partials/sidebar.html", {
+          "category": "pages",
+          "subcategory": "team",
+          "page": "team-new.html"
+        })
+      }
+      @@if (sidebarSize == 'small' || demoMode) {
+        @@include("partials/sidebar-sm.html", {
+          "category": "pages",
+          "subcategory": "team",
+          "page": "team-new.html"
+        })
+      }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "category": "pages",
+        "subcategory": "team",
+        "page": "team-new.html"
+      })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    
+                    <!-- Pretitle -->
+                    <h6 class="header-pretitle">
+                      Aircrft
+                    </h6>
+
+                    <!-- Title -->
+                    <h1 class="header-title">
+                      Startup spotlight form
+                    </h1>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form class="mb-4" name="Aircrft Startup Spotlight Form 4-13-2020" method="POST" data-netlify="true"> 
+
+              <!-- Team name -->
+              <div class="form-group">
+                <label>
+                  Startup name
+                </label>
+                <input type="text" class="form-control">
+              </div>
+
+              <!-- Team description -->
+              <div class="form-group">
+                <label class="mb-1">
+                  Startup description 
+                </label>
+                <small class="form-text text-muted">
+                  What problem does your startup solve? Who's the solution for?
+                </small>
+                <div data-toggle="quill"></div>
+              </div>
+
+              <!-- Team members 
+              <div class="form-group">
+                <label>
+                  Startup website url
+                </label>
+                <select class="form-control" data-toggle="select" multiple>
+                  <option data-avatar-src="assets/img/avatars/profiles/avatar-1.jpg">
+                    Dianna Smiley
+                  </option>
+                  <option data-avatar-src="assets/img/avatars/profiles/avatar-2.jpg">
+                    Ab Hadley
+                  </option>
+                  <option data-avatar-src="assets/img/avatars/profiles/avatar-3.jpg">
+                    Adolfo Hess
+                  </option>
+                  <option data-avatar-src="assets/img/avatars/profiles/avatar-4.jpg">
+                    Daniela Dewitt
+                  </option>
+                </select>
+              </div> -->
+
+              <!-- Divider -->
+              <hr class="mt-4 mb-5">
+
+              <!-- Startup logo -->
+              <div class="form-group">
+                <label class="mb-1">
+                  Startup logo
+                </label>
+                <small class="form-text text-muted">
+                  Please use an image 256px x 256px. File format jpeg/jpg/png
+                </small>
+                <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
+
+                  <div class="fallback">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="teamCoverUploads">
+                      <label class="custom-file-label" for="teamCoverUploads">Choose file</label>
+                    </div>
+                  </div>
+
+                  <div class="dz-preview dz-preview-single">
+                    <div class="dz-preview-cover">
+                      <img class="dz-preview-img" src="..." alt="..." data-dz-thumbnail>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="mt-5 mb-5">
+
+              <!-- Startup cover -->
+              <div class="form-group" >
+                <label class="mb-1">
+                  Startup cover
+                </label>
+                <small class="form-text text-muted">
+                    Please use an image 1200px x 600px. File format jpeg/jpg/png
+                </small>
+                <div class="dropzone dropzone-single mb-3" data-toggle="dropzone"
+                    data-options='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
+            
+                    <div class="fallback">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="teamCoverUploads">
+                            <label class="custom-file-label" for="teamCoverUploads">Choose file</label>
+                        </div>
+                    </div>
+            
+                    <div class="dz-preview dz-preview-single">
+                        <div class="dz-preview-cover">
+                            <img class="dz-preview-img" src="..." alt="..." data-dz-thumbnail>
+                        </div>
+                    </div>
+
+              <!-- Divider -->
+              <hr class="mt-5 mb-5">
+
+                <!-- Buttons -->
+                <p> <button class="btn btn-block btn-primary" type="submit">Send</button>
+                </p>
+                
+                </div>
+              </div>
+
+                  <!-- Private team 
+                  <div class="form-group">
+                    <label class="mb-1">
+                      Private by default. Toggle to make profile publicly viewable.
+                    </label>
+                    <small class="form-text text-muted">
+                    Toggle to make profile publicly viewable.
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="switchOne">
+                      <label class="custom-control-label" for="switchOne"></label>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-12 col-md-6"> -->
+
+                <!-- Warning 
+                <div class="card bg-light border">
+                   <div class="card-body">
+                      
+                      <h4 class="mb-2">
+                        <i class="fe fe-alert-triangle"></i> Welcome
+                      </h4>
+
+                      <p class="small text-muted mb-0">
+                        Thank you for taking the time to complete this form! We look forward to shinning a spotlight on your startup.  
+                      </p>
+
+                   </div>
+                </div>-->
+
+              <!-- Divider 
+              <hr class="mt-5 mb-5">
+
+              Buttons 
+              <a href="#" class="btn btn-block btn-primary">
+                Submit
+              </a> -->
+              <!-- <a href="#" class="btn btn-block btn-link text-muted">
+                Cancel this form
+              </a> -->
+
+            </form>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+      <form name="netlify-contact-forms-test-1" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Your Role: <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+      
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

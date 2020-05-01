@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Aircrft"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+      @@if (sidebarSize == 'base' || demoMode) {
+        @@include("partials/sidebar.html", {
+          "category": "pages",
+          "subcategory": "feed",
+          "page": "feed.html"
+        })
+      }
+      @@if (sidebarSize == 'small' || demoMode) {
+        @@include("partials/sidebar-sm.html", {
+          "category": "pages",
+          "subcategory": "feed",
+          "page": "feed.html"
+        })
+      }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "category": "pages",
+        "subcategory": "feed",
+        "page": "feed.html"
+      })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+        @@if (navPosition == 'combo' || demoMode) {
+          @@include("partials/topbar.html")
+        }
+  
+        <!-- HEADER -->
+        <div class="header">
+          <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+            
+            <!-- Body -->
+            <div class="header-body">
+              <div class="row align-items-center">
+                <div class="col-auto">
+  
+                  <!-- Avatar 
+                  <div class="avatar avatar-lg avatar-4by3">
+                    <img src="assets/img/logo1.svg" alt="..." class="avatar-img rounded">
+                  </div> -->
+  
+                </div>
+                <div class="col ml-n3 ml-md-n2">
+                  
+                  <!-- Pretitle -->
+                  <h6 class="header-pretitle">
+                    AIRCRFT | PODCAST
+                  </h6>
+  
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Talk To Startups / Write Code 
+                  </h1>
+  
+                </div>
+                <div class="col-12 col-md-auto mt-3 mt-md-0">
+                  
+                  <!-- Avatar group 
+                  <div class="avatar-group">
+                    <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Chai Forest">
+                      <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                    <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Ab Hadley">
+                      <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                    <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Adolfo Hess">
+                      <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                    <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Daniela Dewitt">
+                      <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                  </div> -->
+  
+                  <!-- Button 
+                  <a href="#modalMembers" class="btn btn-lg btn-rounded-circle btn-white lift" data-toggle="modal">
+                    +
+                  </a> -->
+  
+                </div>
+              </div> <!-- / .row -->
+              
+            </div>
+  
+          </div>
+        </div> <!-- / .header -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body text-center">
+                          <div class="row justify-content-center">
+                            <div class="col-12 col-md-10 col-xl-8">
+                          
+                              <!-- Image -->
+                              <img src="assets/img/aircrft-logo-clean.png" alt="..." class="img-fluid mt-n5 mb-4" style="max-width: 272px;">
+          
+                              <!-- Title 
+                              <h2>
+                                Founders feed
+                              </h2> -->
+          
+                              <!-- Content -->
+                              <p class="text-muted">
+                                Meet founders and learn what problem they are solving. Explore the latest in tecnology development.
+                              </p>
+          
+                              <!-- Button 
+                              <a href="#!" class="btn btn-primary lift">
+                                Book a test flight!
+                              </a> -->
+                            
+                            </div>
+                          </div> <!-- / .row -->
+                        </div>
+                      </div>
+          
+             <!-- CONTENT -->
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+          <div class="row">
+            <div class="col-12">
+
+              <!-- <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://app.getbeamer.com/aircrftcom/en" allowfullscreen></iframe>
+              </div> -->
+
+              <!-- <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://connect.aircrft.com/home" allowfullscreen></iframe>
+              </div> 
+
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://chaiforest.live/ghost-post-on-mobile-no-problem/https://connect.zoho.com/portal/chaiforest/home" allowfullscreen></iframe>
+              </div>
+
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://chaiforest.live/ghost-post-on-mobile-no-problem/" allowfullscreen></iframe>
+              </div> -->
+
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://gatsby-theme-simplecast.netlify.com/" allowfullscreen></iframe>
+              </div>
+
+              <!-- <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://novela.narative.co/" allowfullscreen></iframe>
+              </div> -->
+              
+              <!-- <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://chat.aircrft.com/index.do" allowfullscreen></iframe>
+              </div> -->
+  
+            </div>   
+
+      </div> <!-- / .main-content -->
+  
+      <!-- JAVASCRIPT
+      ================================================== -->
+      @@include("partials/scripts.html")
+  
+    </body>
+  </html>

@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include("partials/head.html", {
+    "title": "Aircrft memberships"
+    })
+</head>
+
+<body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    <!-- @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) { -->
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "pricing.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "pricing.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "pricing.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+        @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+        }
+
+        <!-- HEADER -->
+        <div class="pt-7 pb-8 bg-dark bg-ellipses">
+            <div
+                class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-6">
+
+                        <!-- Title -->
+                        <h1 class="display-3 text-center text-white">
+                            Aircrft memberships
+                        </h1>
+
+                        <!-- Text -->
+                        <p class="lead text-center text-muted">
+                            Aircrft is a modern enterprise-grade social network built for founders, startup teams and
+                            partners.
+                        </p>
+
+                        <p class="text-center text-muted">
+                            Bring your team and network together in one digital space. Simplify communication, share
+                            knowledge, and uplift
+                            others.
+                        </p>
+
+                    </div>
+                </div> <!-- / .row -->
+            </div>
+        </div>
+
+        <!-- MEMBERSHIP OPTION 1  -->
+        <div
+            class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+            <div class="row mt-n7">
+                <div class="col-12 col-lg-4">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+
+                            <!-- Title -->
+                            <h6 class="text-uppercase text-center text-muted my-4">
+                                Founders
+                            </h6>
+
+                            <!-- Price -->
+                            <div class="row no-gutters align-items-center justify-content-center">
+                                <div class="col-auto">
+                                    <div class="h2 mb-0">$</div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="display-2 mb-0">19</div>
+                                </div>
+                            </div> <!-- / .row -->
+
+                            <!-- Period -->
+                            <div class="h6 text-uppercase text-center text-muted mb-5">
+                                / month
+                            </div>
+
+                            <!-- Features -->
+                            <div class="mb-3">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Personalized activity feeds for members</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Direct messaging - voice, text, video 1-on-1 and group</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Video conference - remote team optimized</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Communicate seamlessly - organized conversations in teams and channels
+                                        </small> <i class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Real-time collaboration on all your devices</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Voice, video, and screen sharing</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Manuals, articles, and blog posts with file, image, and link
+                                            sharing</small> <i class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Communicate seamlessly Organized conversations in teams and
+                                            channels</small> <small></small>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Communicate seamlessly
+                                            Organized conversations in teams and channels</small> <small></small>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Groups - bring your network together with public & private groups</small>
+                                        <small></small>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Founders feed</small> <small>-Personalized activity feeds for
+                                            members</small>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Direct messaging</small> <small>Voice, text, video</small>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Groups - bring your network together with public & private groups</small>
+                                        <small>No access</small>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Button -->
+                            <a href="#!" class="btn btn-block btn-light">
+                                Start with Founders
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-4">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+
+                            <!-- Title -->
+                            <h6 class="text-uppercase text-center text-muted my-4">
+                                Startup Teams
+                            </h6>
+
+                            <!-- Price -->
+                            <div class="row no-gutters align-items-center justify-content-center">
+                                <div class="col-auto">
+                                    <div class="h2 mb-0">$</div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="display-2 mb-0">29</div>
+                                </div>
+                            </div> <!-- / .row -->
+
+                            <!-- Period -->
+                            <div class="h6 text-uppercase text-center text-muted mb-5">
+                                / month
+                            </div>
+
+                            <!-- Features -->
+                            <div class="mb-3">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Unlimited activity</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Direct messaging</small> <i class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Members</small> <small>50 members</small>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Admins</small> <small>5 admins</small>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Button -->
+                            <a href="#!" class="btn btn-block btn-primary">
+                                Start with Startup Teams
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-4">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+
+                            <!-- Title -->
+                            <h6 class="text-uppercase text-center text-muted my-4">
+                                Entreprise
+                            </h6>
+
+                            <!-- Price -->
+                            <div class="row no-gutters align-items-center justify-content-center">
+                                <div class="col-auto">
+                                    <div class="h2 mb-0">$</div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="display-2 mb-0">99</div>
+                                </div>
+                            </div> <!-- / .row -->
+
+                            <!-- Period -->
+                            <div class="h6 text-uppercase text-center text-muted mb-5">
+                                / month
+                            </div>
+
+                            <!-- Features -->
+                            <div class="mb-3">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Unlimited team members and activity</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Developer API's</small> <i class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Admin level access</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Professional content publishing platform</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                        <small>Embed custom activity feeds</small> <i
+                                            class="fe fe-check-circle text-success"></i>
+                                    </li>
+                                </ul>
+                            </div> -->
+
+                            <!-- Button -->
+                            <a href="#!" class="btn btn-block btn-light">
+                                Start with Escape Velocity
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-12 col-md-6">
+
+                    <!-- Card -->
+                    <div class="card card-inactive">
+                        <div class="card-body">
+
+                            <!-- Title -->
+                            <h3 class="text-center">
+                                Need some help deciding?
+                            </h3>
+
+                            <!-- Text -->
+                            <p class="text-muted text-center">
+                                We can help you decide what’s the best for your company based on a lot of factors and
+                                other cool stuff that I’m going to write about.
+                            </p>
+
+                            <!-- Button -->
+                            <div class="text-center">
+                                <a href="#!" class="btn btn-outline-secondary">
+                                    Contact us
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+
+                    <!-- Card -->
+                    <div class="card card-inactive">
+                        <div class="card-body">
+
+                            <!-- Title -->
+                            <h3 class="text-center">
+                                Want a custom plan?
+                            </h3>
+
+                            <!-- Text -->
+                            <p class="text-muted text-center">
+                                We can help you decide what’s the best for your company based on a lot of factors and
+                                other cool stuff that I’m going to write about.
+                            </p>
+
+                            <!-- Button -->
+                            <div class="text-center">
+                                <a href="#!" class="btn btn-outline-secondary">
+                                    Build it
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+        </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+</body>
+
+</html>

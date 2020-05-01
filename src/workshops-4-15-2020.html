@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include("partials/head.html", {
+    "title": "Aircrft"
+    })
+</head>
+
+<body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+        @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+        }
+
+        <!-- HEADER -->
+        <div class="header">
+
+            <!-- Image -->
+            <img src="assets/img/covers/workshops/workshops-cover-gray-800-rainbow.png" class="header-img-top" alt="...">
+
+            <div
+                class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+                <!-- Body -->
+                <div class="header-body mt-n5 mt-md-n6">
+                    <div class="row align-items-end">
+                        <div class="col-auto">
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xxl header-avatar-top">
+                                <img src="assets/img/avatars/icons/workshops-feather-icon-small.jpg" alt="workshops"
+                                    class="avatar-img rounded-circle border border-4 border-body">
+                            </div>
+
+                        </div>
+                        <div class="col mb-3 ml-n3 ml-md-n2">
+
+                            <!-- Pretitle -->
+                            <h6 class="header-pretitle">
+                                Aircrft
+                            </h6>
+
+                            <!-- Title -->
+                            <h1 class="header-title">
+                                Workshops
+                            </h1>
+
+                        </div>
+                        <div class="col-12 col-md-auto mt-2 mt-md-0 mb-md-3">
+
+                            <!-- Button 
+                            <a href="#!" class="btn btn-primary d-block d-md-inline-block lift">
+                                Subscribe
+                            </a> -->
+
+                        </div>
+                    </div> <!-- / .row -->
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Nav -->
+                            <ul class="nav nav-tabs nav-overflow header-tabs">
+                                <li class="nav-item">
+                                    <a href="profile-posts.html" class="nav-link">
+                                        Fundamentals
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="profile-groups.html" class="nav-link">
+                                        Leadership
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="profile-projects.html" class="nav-link">
+                                        Funding
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="profile-files.html" class="nav-link">
+                                        Code
+                                    </a>
+                                </li>
+                            </ul> 
+
+                        </div>
+                    </div>
+                </div> <!-- / .header-body -->
+
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div
+            class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+            <div class="row">
+                <div class="col-12 col-md-6 col-xl-4">
+
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="dropdown card-dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                    Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Something else here
+                                </a>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/covers/profile-cover-2.jpg" alt="..." class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                            <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                                <img src="assets/img/avatars/icons/ycsus.jpg"
+                                    class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                            </a>
+
+                            <h2 class="card-title">
+                                <a href="profile-posts.html">YCSUS Curated Collection</a>
+                            </h2>
+
+                            <p class="card-text text-muted">
+                                <small>
+                                    A curated collection for the most powerful lessons and lectures form YC Startup School. Well worth reviewing and referencing often.
+                                </small>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="badge badge-soft-secondary">
+                                    Curated Collection
+                                </span>
+                                <span class="badge badge-soft-secondary">
+                                    Fundamentals
+                                </span>
+                            </p>
+
+                            <hr>
+
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+
+                                    <small>
+                                        <span class="text-success">●</span> Active
+                                    </small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                    <a href="#!" class="btn btn-sm btn-primary">
+                                        Deploy
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="dropdown card-dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                    Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Something else here
+                                </a>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/covers/profile-cover-3.jpg" alt="..." class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                            <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                                <img src="assets/img/avatars/profiles/avatar-3.jpg"
+                                    class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                            </a>
+
+                            <h2 class="card-title">
+                                <a href="profile-posts.html">Compassionate Leadership
+</a>
+                            </h2>
+
+                            <p class="card-text text-muted">
+                                <small>
+                                    Learn actionable compassionate management strategies to scale a vibrant compassionate company culture. 
+                                </small>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="badge badge-soft-secondary">
+                                    Leadership
+                                </span>
+                                <span class="badge badge-soft-secondary">
+                                    Dream teams
+                                </span>
+                            </p>
+
+                            <hr>
+
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+
+                                    <small>
+                                        <span class="text-success">●</span> Online
+                                    </small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                    <a href="#!" class="btn btn-sm btn-primary">
+                                        Subscribe
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="dropdown card-dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                    Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Something else here
+                                </a>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/covers/profile-cover-4.jpg" alt="..." class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                            <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                                <img src="assets/img/avatars/profiles/avatar-4.jpg"
+                                    class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                            </a>
+
+                            <h2 class="card-title">
+                                <a href="profile-posts.html">Remote Teams</a>
+                            </h2>
+
+                            <p class="card-text text-muted">
+                                <small>
+                                    Distribute team best practices in the COV19 economy.
+                                </small>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="badge badge-soft-secondary">
+                                    Dream teams
+                                </span>
+                                <span class="badge badge-soft-secondary">
+                                    Best practices
+                                </span>
+                            </p>
+
+                            <hr>
+
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+
+                                    <small>
+                                        <span class="text-warning">●</span> Busy
+                                    </small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                    <a href="#!" class="btn btn-sm btn-primary">
+                                        Subscribe
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="dropdown card-dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                    Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Something else here
+                                </a>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/covers/profile-cover-5.jpg" alt="..." class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                            <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                                <img src="assets/img/avatars/profiles/avatar-5.jpg"
+                                    class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                            </a>
+
+                            <h2 class="card-title">
+                                <a href="profile-posts.html">Paying it forward</a>
+                            </h2>
+
+                            <p class="card-text text-muted">
+                                <small>
+                                    Deploy the Aircrft Uplift Algorithm
+                                </small>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="badge badge-soft-secondary">
+                                    Uplift algorithm
+                                </span>
+                                <span class="badge badge-soft-secondary">
+                                    Ops
+                                </span>
+                            </p>
+
+                            <hr>
+
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+
+                                    <small>
+                                        <span class="text-success">●</span> Online
+                                    </small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                    <a href="#!" class="btn btn-sm btn-primary">
+                                        Subscribe
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="dropdown card-dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                    Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Something else here
+                                </a>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/covers/profile-cover-6.jpg" alt="..." class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                            <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                                <img src="assets/img/avatars/profiles/avatar-6.jpg"
+                                    class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                            </a>
+
+                            <h2 class="card-title">
+                                <a href="profile-posts.html">JAMstack Workshop</a>
+                            </h2>
+
+                            <p class="card-text text-muted">
+                                <small>
+                                    Learn modern web develpement best practices.
+                                </small>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="badge badge-soft-secondary">
+                                    Code
+                                </span>
+                                <span class="badge badge-soft-secondary">
+                                    JAMstack
+                                </span>
+                            </p>
+
+                            <hr>
+
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+
+                                    <small>
+                                        <span class="text-success">●</span> Online
+                                    </small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                    <a href="#!" class="btn btn-sm btn-primary">
+                                        Subscribe
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="dropdown card-dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                    Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Something else here
+                                </a>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/covers/profile-cover-7.jpg" alt="..." class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                            <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                                <img src="assets/img/avatars/profiles/avatar-7.jpg"
+                                    class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                            </a>
+
+                            <h2 class="card-title">
+                                <a href="profile-posts.html">Sustainable Startup Funding</a>
+                            </h2>
+
+                            <p class="card-text text-muted">
+                                <small>
+                                    Building a billion dollar business with purpose and passion.
+                                </small>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="badge badge-soft-secondary">
+                                    Funding
+                                </span>
+                                <span class="badge badge-soft-secondary">
+                                    Purpose
+                                </span>
+                            </p>
+
+                            <hr>
+
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+
+                                    <small>
+                                        <span class="text-secondary">●</span> Offline
+                                    </small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                    <a href="#!" class="btn btn-sm btn-primary">
+                                        Deploy workshop
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+</body>
+
+</html>
